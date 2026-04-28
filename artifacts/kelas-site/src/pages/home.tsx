@@ -3,12 +3,6 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Skeleton } from "@/components/ui/skeleton";
-import {
-  Users,
-  Image as ImageIcon,
-  MessageSquare,
-  Calendar,
-} from "lucide-react";
 import heroGroupImg from "@/assets/images/hero-group.jpg";
 
 export default function Home() {
@@ -96,65 +90,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-      {/* Stats Section */}
-      <section className="py-24 bg-background relative z-10 border-t border-border/50">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <StatCard
-              icon={<Users />}
-              value={classInfo?.memberCount?.toString() || "36"}
-              label="Anggota Kelas"
-              delay={0}
-            />
-            <StatCard
-              icon={<ImageIcon />}
-              value="120+"
-              label="Foto Kenangan"
-              delay={0.1}
-            />
-            <StatCard
-              icon={<Calendar />}
-              value="3"
-              label="Tahun Bersama"
-              delay={0.2}
-            />
-            <StatCard
-              icon={<MessageSquare />}
-              value="50+"
-              label="Pesan Ditinggalkan"
-              delay={0.3}
-            />
-          </div>
-        </div>
-      </section>
     </div>
-  );
-}
-
-function StatCard({
-  icon,
-  value,
-  label,
-  delay,
-}: {
-  icon: React.ReactNode;
-  value: string;
-  label: string;
-  delay: number;
-}) {
-  return (
-    <motion.div
-      className="flex flex-col items-center text-center p-6 rounded-2xl bg-card border border-border"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay }}
-    >
-      <div className="p-3 bg-primary/10 rounded-xl text-primary mb-4">
-        {icon}
-      </div>
-      <h3 className="text-3xl font-bold text-white mb-2">{value}</h3>
-      <p className="text-sm text-muted-foreground">{label}</p>
-    </motion.div>
   );
 }
