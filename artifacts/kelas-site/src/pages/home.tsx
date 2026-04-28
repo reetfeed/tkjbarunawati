@@ -39,8 +39,8 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <span className="inline-block py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium tracking-widest uppercase mb-6">
-              Angkatan {classInfo?.year || "2024/2025"}
+            <span className="inline-block py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium tracking-widest uppercase mb-6 text-[#5e95e0]">
+              Angkatan {classInfo?.year || "2023 - 2026"}
             </span>
           </motion.div>
           
@@ -82,7 +82,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-24 bg-background relative z-10 border-t border-border/50">
         <div className="container mx-auto px-4 md:px-8">
