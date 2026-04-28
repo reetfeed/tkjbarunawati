@@ -50,7 +50,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
-            {classInfo?.className || "XII IPA 2"}
+            {classInfo?.className || "XII TKJ"}
           </motion.h1>
           
           <motion.p 
