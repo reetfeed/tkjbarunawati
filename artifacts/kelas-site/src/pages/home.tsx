@@ -59,7 +59,8 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
           >
-            "{classInfo?.motto || "Cerita yang tidak akan pernah usai."}"
+            "{classInfo?.motto || "Bersama kita ukir kenangan, bersama kita raih impian."}"
+            <br />TKJ BRETT
           </motion.p>
           
           <motion.div
