@@ -1,0 +1,32 @@
+Landing Page â†’ Navigasi Utama â†’ Konten Spesifik â†’ Interaksi (Like / Komentar / Pesan)
+
+Lebih detailnya, ketika pengunjung membuka website, mereka disambut oleh Landing Page berisi nama kelas, tahun angkatan, dan foto grup kelas sebagai hero image. Dari sini, pengguna bisa mengakses menu utama dan bebas menjelajahi berbagai section. Jika website memiliki fitur login (untuk anggota kelas), ada jalur tambahan: Login â†’ Dashboard Anggota â†’ Edit Profil / Upload Foto.
+
+Diagram alur sederhananya:
+
+text
+[Landing Page]
+      â†“
+[Navbar: Beranda | Anggota | Galeri | Kenangan | Pesan]
+      â†“              â†“           â†“          â†“         â†“
+[Hero + Intro]  [Grid Foto  [Album     [Timeline  [Buku
+                 Anggota]    Kegiatan]  Kelas]     Tamu/Pesan]
+                     â†“
+               [Profil Detail
+                Per Anggota]
+Core Pages & Fitur
+1. Landing Page (Beranda)
+Ini adalah halaman pertama yang dilihat semua orang, jadi harus berkesan. Kontennya mencakup: nama kelas dan angkatan, foto kelas besar (hero image), kutipan atau motto kelas, dan animasi ringan untuk kesan yang hidup. Navigasi harus terlihat jelas dan legible agar pengunjung tidak kebingungan.
+
+2. Halaman Anggota Kelas
+Ini adalah inti dari website kenang-kenangan. Setiap anggota ditampilkan dalam grid card berisi foto, nama, dan jabatan/peran di kelas. Ketika diklik, muncul halaman profil detail yang memuat bio singkat, quote favorit, cita-cita, kenangan terbaik di kelas, dan foto tambahan. Struktur grid yang konsisten membuat halaman ini mudah dibaca.
+
+3. Galeri Kegiatan
+Halaman ini menampilkan koleksi foto dan video dari berbagai kegiatan kelas â€” study tour, pensi, ujian bersama, dan momen sehari-hari. Galeri bisa diorganisir per kategori atau per event. Fitur lightbox (foto membesar saat diklik) sangat disarankan untuk pengalaman visual yang lebih baik.
+
+4. Timeline Kenangan
+Section ini menyajikan perjalanan kelas secara kronologis dari awal masuk hingga kelulusan. Setiap entry berisi tanggal, deskripsi singkat, dan foto pendukung. Ini memberi nuansa "napak tilas" yang sangat cocok untuk kenang-kenangan karena pembaca bisa merasakan narasi waktu yang mengalir.
+
+5. Buku Tamu / Papan Pesan
+Fitur interaktif di mana anggota kelas bisa menulis pesan perpisahan, harapan, atau kenangan lucu satu sama lain. Ini bisa berupa form sederhana yang menyimpan pesan ke database, dan semua pesan ditampilkan secara publik di halaman tersebut.
+

@@ -1,0 +1,26 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "XbseVkDj1h_bRbK2in-sQ"
+uri = "file://artifacts/tricia-site/src/assets/images/portfolio-1.png"
+type = "image"
+title = "Graduation yearbook website mockup"
+
+[[generated]]
+id = "lCWgWLHNqM2huUiLvi-6L"
+uri = "file://artifacts/tricia-site/src/assets/images/portfolio-2.png"
+type = "image"
+title = "Class reunion timeline mockup"
+
+[[generated]]
+id = "q2GW_jHlbIfyNFRpUc4rA"
+uri = "file://artifacts/tricia-site/src/assets/images/portfolio-3.png"
+type = "image"
+title = "Digital yearbook mosaic mockup"
+
+[[generated]]
+id = "EG0814pfj_0fMX08Ruz6C"
+uri = "file://artifacts/tricia-site/src/assets/images/texture.png"
+type = "image"
+title = "Dark fabric and blue thread"
