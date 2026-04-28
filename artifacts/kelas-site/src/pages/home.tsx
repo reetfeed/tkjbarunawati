@@ -23,12 +23,12 @@ export default function Home() {
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-background/80 md:bg-background/60 z-10" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent z-10" />
+          <div className="absolute inset-0 bg-background/30 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent z-10" />
           <img 
             src={heroGroupImg} 
             alt="Class Group" 
-            className="w-full h-full object-cover object-center opacity-40"
+            className="w-full h-full object-cover object-center opacity-100"
           />
         </div>
 
