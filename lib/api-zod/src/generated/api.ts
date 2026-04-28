@@ -8,9 +8,105 @@
 import * as zod from "zod";
 
 /**
- * Returns server health status
  * @summary Health check
  */
 export const HealthCheckResponse = zod.object({
   status: zod.string(),
+});
+
+/**
+ * @summary Get class info
+ */
+export const GetClassInfoResponse = zod.object({
+  className: zod.string(),
+  year: zod.string(),
+  motto: zod.string(),
+  heroImageUrl: zod.string().optional(),
+  memberCount: zod.number(),
+});
+
+/**
+ * @summary List all class members
+ */
+export const ListMembersResponseItem = zod.object({
+  id: zod.number(),
+  name: zod.string(),
+  role: zod.string(),
+  photoUrl: zod.string().optional(),
+  quote: zod.string().optional(),
+});
+export const ListMembersResponse = zod.array(ListMembersResponseItem);
+
+/**
+ * @summary Get member detail
+ */
+export const GetMemberParams = zod.object({
+  id: zod.coerce.number(),
+});
+
+export const GetMemberResponse = zod.object({
+  id: zod.number(),
+  name: zod.string(),
+  role: zod.string(),
+  photoUrl: zod.string().optional(),
+  quote: zod.string().optional(),
+  bio: zod.string().optional(),
+  ambition: zod.string().optional(),
+  bestMemory: zod.string().optional(),
+  additionalPhotos: zod.array(zod.string()).optional(),
+});
+
+/**
+ * @summary List gallery photos
+ */
+export const ListGalleryQueryParams = zod.object({
+  category: zod.coerce.string().optional(),
+});
+
+export const ListGalleryResponseItem = zod.object({
+  id: zod.number(),
+  imageUrl: zod.string(),
+  caption: zod.string().optional(),
+  category: zod.string(),
+  takenAt: zod.string().optional(),
+});
+export const ListGalleryResponse = zod.array(ListGalleryResponseItem);
+
+/**
+ * @summary List gallery categories
+ */
+export const ListGalleryCategoriesResponseItem = zod.string();
+export const ListGalleryCategoriesResponse = zod.array(
+  ListGalleryCategoriesResponseItem,
+);
+
+/**
+ * @summary List class timeline events
+ */
+export const ListTimelineResponseItem = zod.object({
+  id: zod.number(),
+  date: zod.string(),
+  title: zod.string(),
+  description: zod.string(),
+  imageUrl: zod.string().optional(),
+});
+export const ListTimelineResponse = zod.array(ListTimelineResponseItem);
+
+/**
+ * @summary List guestbook messages
+ */
+export const ListMessagesResponseItem = zod.object({
+  id: zod.number(),
+  authorName: zod.string(),
+  content: zod.string(),
+  createdAt: zod.string(),
+});
+export const ListMessagesResponse = zod.array(ListMessagesResponseItem);
+
+/**
+ * @summary Post a guestbook message
+ */
+export const CreateMessageBody = zod.object({
+  authorName: zod.string(),
+  content: zod.string(),
 });

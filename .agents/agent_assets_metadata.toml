@@ -24,3 +24,9 @@ id = "EG0814pfj_0fMX08Ruz6C"
 uri = "file://artifacts/tricia-site/src/assets/images/texture.png"
 type = "image"
 title = "Dark fabric and blue thread"
+
+[[generated]]
+id = "HD1nU6228uvRJ_Iir6ugo"
+uri = "file://artifacts/kelas-site/src/assets/images/hero-group.png"
+type = "image"
+title = "Class group photo in dark cinematic style"

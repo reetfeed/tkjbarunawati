@@ -6,4 +6,12 @@
  * OpenAPI spec version: 0.1.0
  */
 
+export * from "./classInfo";
+export * from "./galleryPhoto";
 export * from "./healthStatus";
+export * from "./listGalleryParams";
+export * from "./member";
+export * from "./memberDetail";
+export * from "./message";
+export * from "./newMessage";
+export * from "./timelineEvent";
