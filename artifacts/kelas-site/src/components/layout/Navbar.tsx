@@ -35,9 +35,7 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-2 group">
-            <span className="text-xl font-bold tracking-tight text-white group-hover:text-primary transition-colors">
-              XII IPA 2
-            </span>
+            <span className="text-xl font-bold tracking-tight text-white group-hover:text-primary transition-colors">XII TKJ AKT 26</span>
           </Link>
 
           {/* Desktop Nav */}
@@ -65,7 +63,6 @@ export function Navbar() {
           </button>
         </div>
       </div>
-
       {/* Mobile Nav */}
       <AnimatePresence>
         {mobileMenuOpen && (
