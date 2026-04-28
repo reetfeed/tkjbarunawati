@@ -45,7 +45,7 @@ export default function Home() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <span className="inline-block py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium tracking-widest uppercase mb-6 text-[#5e95e0]">
-              Angkatan {classInfo?.year || "2023 - 2026"}
+              Angkatan {classInfo?.year || "2023/2026"}
             </span>
           </motion.div>
 
