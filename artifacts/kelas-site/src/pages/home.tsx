@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Users, Image as ImageIcon, MessageSquare, Calendar } from "lucide-react";
-import heroGroupImg from "@/assets/images/hero-group.png";
+import heroGroupImg from "@/assets/images/hero-group.jpg";
 
 export default function Home() {
   const { data: classInfo, isLoading } = useGetClassInfo();
