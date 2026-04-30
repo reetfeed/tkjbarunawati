@@ -32,3 +32,4 @@ Push schema ke database Neon:
 DATABASE_URL="postgresql://..." npx drizzle-kit push --config ./drizzle.config.ts
 ```
 # tkjbarunawati
+# tkjbarunawati
