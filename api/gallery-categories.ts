@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { getDb } from "./_db";
-import { galleryTable } from "./schema";
+import { getDb } from "./_db.js";
+import { galleryTable } from "./schema/index.js";
 
 export default async function handler(_req: VercelRequest, res: VercelResponse) {
   try {
