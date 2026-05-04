@@ -134,7 +134,7 @@ export default function Galeri() {
                   src={selectedPhoto.imageUrl}
                   className="max-w-full max-h-[80vh] object-contain"
                   controls
-                  autoPlay
+                  playsInline
                 />
               ) : (
                 <img 
