@@ -21,7 +21,7 @@ export function Footer() {
         </div>
       </div>
       <div className="container mx-auto px-4 md:px-8 mt-12 text-center text-xs text-muted-foreground/50">
-        &copy; {new Date().getFullYear()} {classInfo?.className || "XII TKJ"}. Crafted with intention.
+        &copy; {new Date().getFullYear()} {classInfo?.className || "XII TKJ"} BRETT
       </div>
     </footer>
   );

@@ -10,6 +10,11 @@ export default function Galeri() {
   const [activeCategory, setActiveCategory] = useState<string | undefined>(undefined);
   const [selectedPhoto, setSelectedPhoto] = useState<GalleryPhoto | null>(null);
 
+  const isVideoUrl = (url: string) => {
+    if (!url) return false;
+    return /\.(mp4|webm|ogg|mov|m4v)(\?.*)?$/i.test(url);
+  };
+
   const { data: categories, isLoading: isLoadingCategories } = useListGalleryCategories();
   const { data: photos, isLoading: isLoadingPhotos } = useListGallery({ category: activeCategory });
 
@@ -86,12 +91,28 @@ export default function Galeri() {
                   className="aspect-square relative group overflow-hidden rounded-xl cursor-pointer bg-secondary"
                   onClick={() => setSelectedPhoto(photo)}
                 >
-                  <img 
-                    src={photo.imageUrl} 
-                    alt={photo.caption || "Gallery photo"} 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    loading="lazy"
-                  />
+                  {isVideoUrl(photo.imageUrl) ? (
+                    <video
+                      src={photo.imageUrl}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      muted
+                      loop
+                      playsInline
+                      onMouseOver={(e) => (e.target as HTMLVideoElement).play().catch(() => {})}
+                      onMouseOut={(e) => {
+                        const v = e.target as HTMLVideoElement;
+                        v.pause();
+                        v.currentTime = 0;
+                      }}
+                    />
+                  ) : (
+                    <img 
+                      src={photo.imageUrl} 
+                      alt={photo.caption || "Gallery photo"} 
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      loading="lazy"
+                    />
+                  )}
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                     <p className="text-white font-medium truncate">{photo.caption}</p>
                     <p className="text-primary text-sm">{photo.category}</p>
@@ -108,11 +129,20 @@ export default function Galeri() {
         <DialogContent className="max-w-[90vw] md:max-w-[80vw] h-[90vh] p-0 bg-black/95 border-none shadow-2xl flex flex-col items-center justify-center">
           {selectedPhoto && (
             <div className="relative w-full h-full flex flex-col items-center justify-center">
-              <img 
-                src={selectedPhoto.imageUrl} 
-                alt={selectedPhoto.caption}
-                className="max-w-full max-h-[80vh] object-contain"
-              />
+              {isVideoUrl(selectedPhoto.imageUrl) ? (
+                <video
+                  src={selectedPhoto.imageUrl}
+                  className="max-w-full max-h-[80vh] object-contain"
+                  controls
+                  autoPlay
+                />
+              ) : (
+                <img 
+                  src={selectedPhoto.imageUrl} 
+                  alt={selectedPhoto.caption}
+                  className="max-w-full max-h-[80vh] object-contain"
+                />
+              )}
               {selectedPhoto.caption && (
                 <div className="absolute bottom-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent text-center">
                   <p className="text-white text-lg">{selectedPhoto.caption}</p>
